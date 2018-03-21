@@ -2,34 +2,37 @@
 #define POLYNOMIALINTERNAL_H
 #include <bits/stdc++.h>
 
+template < class T > class Pair;
+
+template < class T >
 class Polynomial {
     int degree;
-    double *coefficients;
+    T *coefficients;
 public:
     ~Polynomial();
     Polynomial();
     Polynomial(const int &len);
-    Polynomial(const Polynomial &other);
+    Polynomial(const Polynomial<T> &other);
 
-    friend std::istream& operator >> (std::istream&, Polynomial &);
-    friend std::ostream& operator << (std::ostream&, Polynomial &);
+    template < class U > friend std::istream& operator >> (std::istream&, Polynomial < U > &);
+    template < class U > friend std::ostream& operator << (std::ostream&, Polynomial < U > &);
 
     void Equilibrate();
     void Clear();
     bool IsNull() const;
-    double ValueOnPoint(const double &point) const;
-    Polynomial operator + (const Polynomial &other) const;
-    Polynomial operator - (const Polynomial &other) const;
-    Polynomial& operator = (const Polynomial &other);
-    bool operator == (const Polynomial &other) const;
-    bool operator != (const Polynomial &other) const;
-    bool operator < (const Polynomial &other) const;
-    Polynomial operator * (const Polynomial &other) const;
-    Polynomial operator / (const Polynomial &other) const;
-    Polynomial operator % (const Polynomial &other) const;
-    double operator [] (const int &pos) const;
+    T ValueOnPoint(const T &point) const;
+    Polynomial<T> operator + (const Polynomial<T> &other) const;
+    Polynomial<T> operator - (const Polynomial<T> &other) const;
+    Polynomial<T>& operator = (const Polynomial<T> &other);
+    bool operator == (const Polynomial<T> &other) const;
+    bool operator != (const Polynomial<T> &other) const;
+    bool operator < (const Polynomial<T> &other) const;
+    Polynomial<T> operator * (const Polynomial<T> &other) const;
+    Polynomial<T> operator / (const Polynomial<T> &other) const;
+    Polynomial<T> operator % (const Polynomial<T> &other) const;
+    T operator [] (const int &pos) const;
 
-    friend class Pair;
+    friend class Pair<T>;
 };
 
 #endif

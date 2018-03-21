@@ -11,7 +11,7 @@ int main() {
     int polynomialNumber;
     fin >> polynomialNumber;
 
-    Polynomial *polynoms = new Polynomial[polynomialNumber];
+    Polynomial<double> *polynoms = new Polynomial<double>[polynomialNumber];
     for(int i = 0; i < polynomialNumber; ++i) {
         fin >> polynoms[i];
     }
@@ -19,7 +19,7 @@ int main() {
     int pairNumber;
     fin >> pairNumber;
 
-    Pair *pairs = new Pair[pairNumber];
+    Pair<double> *pairs = new Pair<double>[pairNumber];
     for(int i = 0; i < pairNumber; ++i) {
         fin >> pairs[i];
     }
@@ -28,7 +28,7 @@ int main() {
         fout << polynoms[i] << "\n";
     }
     if(polynomialNumber >= 2) {
-        Polynomial p = polynoms[0] + polynoms[1];
+        Polynomial<double> p = polynoms[0] + polynoms[1];
         fout << "SUM\n" << p << "\n";
         p = polynoms[0] - polynoms[1];
         fout << "DIF\n" << p << "\n";
