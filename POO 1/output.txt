@@ -1,0 +1,28 @@
+Polynomial degree is 3
+((1) * x^3) + ((3) * x^2) + ((-4) * x^1) + (-12)
+Polynomial degree is 2
+((1) * x^2) + ((1) * x^1) + (-6)
+SUM
+Polynomial degree is 3
+((1) * x^3) + ((4) * x^2) + ((-3) * x^1) + (-18)
+DIF
+Polynomial degree is 3
+((1) * x^3) + ((2) * x^2) + ((-5) * x^1) + (-6)
+DIV
+Polynomial degree is 1
+((1) * x^1) + (2)
+MUL
+Polynomial degree is 5
+((1) * x^5) + ((4) * x^4) + ((-7) * x^3) + ((-34) * x^2) + ((12) * x^1) + (72)
+MOD
+Polynomial degree is 0
+(0)
+Value is 25.392
+Polynomial degree is 3
+((1) * x^3) + ((3) * x^2) + ((-4) * x^1) + (-12)
+Value is 61.253
+Polynomial degree is 3
+((1) * x^3) + ((3) * x^2) + ((-4) * x^1) + (-12)
+Value is 1
+Polynomial degree is 1
+((2) * x^1) + (-2)
