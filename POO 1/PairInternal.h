@@ -6,7 +6,7 @@ template < class T > class Polynomial;
 
 template < class T >
 class Pair {
-    double value;
+    T value;
     Polynomial<T> polynomial;
 public:
     ~Pair();
