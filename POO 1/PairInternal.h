@@ -2,29 +2,24 @@
 #define PAIRINTERNAL_H
 #include <bits/stdc++.h>
 
-template < class T > class Polynomial;
-
-template < class T >
 class Pair {
-    T value;
-    Polynomial<T> polynomial;
+    double value;
+    Polynomial polynomial;
 public:
     ~Pair();
     Pair();
-    Pair(const T &value, const Polynomial<T> &polinomial);
-    Pair(const Pair<T> &other);
+    Pair(const double &value, const Polynomial &polinomial);
+    Pair(const Pair &other);
 
-    template < class U > friend std::istream& operator >> (std::istream&, Pair<U> &);
-    template < class U > friend std::ostream& operator << (std::ostream&, Pair<U> &);
+    friend std::istream& operator >> (std::istream&, Pair &);
+    friend std::ostream& operator << (std::ostream&, Pair &);
 
-    Pair<T>& operator = (const Pair<T> &other);
-    bool operator == (const Pair<T> &other) const;
-    bool operator != (const Pair<T> &other) const;
-    bool operator < (const Pair<T> &other) const;
+    Pair& operator = (const Pair &other);
+    bool operator == (const Pair &other) const;
+    bool operator != (const Pair &other) const;
+    bool operator < (const Pair &other) const;
     bool IsRoot() const;
     double GetValue() const;
-
-    friend class Polynomial<T>;
 };
 
 #endif
