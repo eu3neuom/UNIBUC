@@ -3,50 +3,62 @@
 
 using namespace std;
 
-Pair::~Pair() {
+template < class T >
+Pair<T>::~Pair() {
     polynomial.Clear();
 }
-Pair::Pair() : value(0) {
+template < class T >
+Pair<T>::Pair() : value(0) {
 }
-Pair::Pair(const double &value, const Polynomial &polynomial) : value(value), polynomial(polynomial) {
+template < class T >
+Pair<T>::Pair(const T &value, const Polynomial<T> &polynomial) : value(value), polynomial(polynomial) {
 }
-Pair::Pair(const Pair &other) {
+template < class T >
+Pair<T>::Pair(const Pair<T> &other) {
     this -> value = other.value;
     this -> polynomial = other.polynomial;
 }
 
-istream& operator >> (istream &in, Pair &pai) {
+template < class T >
+istream& operator >> (istream &in, Pair<T> &pai) {
     in >> pai.value >> pai.polynomial;
     
     return in;
 }
-ostream& operator << (ostream &out, Pair &pai) {
+template < class T >
+ostream& operator << (ostream &out, Pair<T> &pai) {
     out << "Value is " << pai.value << "\n" << pai.polynomial;
     return out;
 }
 
-Pair& Pair::operator = (const Pair &other) {
+template < class T >
+Pair<T>& Pair<T>::operator = (const Pair<T> &other) {
     this -> value = other.value;
     this -> polynomial = other.polynomial;
 
     return (*this);
 }
-bool Pair::operator == (const Pair &other) const {
+template < class T >
+bool Pair<T>::operator == (const Pair<T> &other) const {
     return ((this -> value == other.value) && (this -> polynomial == other.polynomial));
 }
-bool Pair::operator != (const Pair &other) const {
+template < class T >
+bool Pair<T>::operator != (const Pair<T> &other) const {
     return !(*this == other);
 }
-bool Pair::operator < (const Pair &other) const {
+template < class T >
+bool Pair<T>::operator < (const Pair<T> &other) const {
     if(this -> polynomial != other.polynomial) {
         return this -> polynomial < other.polynomial;
     }
     
     return (this -> value < other.value);
 }
-bool Pair::IsRoot() const {
+template < class T >
+bool Pair<T>::IsRoot() const {
     return (this -> polynomial.ValueOnPoint(this -> value) == 0.0);
 }
-double Pair::GetValue() const {
+template < class T >
+double Pair<T>::GetValue() const {
     return (this -> value);
 }
