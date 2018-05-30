@@ -1,7 +1,15 @@
 #include <bits/stdc++.h>
 #include "BikeInternal.h"
 
+Bike::~Bike() {
+
+}
+
 Bike::Bike() : speed(20) {
+
+}
+
+Bike::Bike(int speed) : speed(speed) {
 
 }
 

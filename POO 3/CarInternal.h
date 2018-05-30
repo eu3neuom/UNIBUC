@@ -13,7 +13,9 @@ protected:
     virtual void printVehicle(std::ostream &, const Vehicle &) const;
     virtual std::istream& readVehicle(std::istream &, Vehicle &);
 public:
+    ~Car();
     Car();
+    Car(int);
 };
 
 #endif

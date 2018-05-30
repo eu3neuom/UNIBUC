@@ -1,7 +1,15 @@
 #include <bits/stdc++.h>
 #include "TruckInternal.h"
 
+Truck::~Truck() {
+
+}
+
 Truck::Truck() : speed(5) {
+
+}
+
+Truck::Truck(int a, bool b) : speed(a), coldSupport(b) {
 
 }
 

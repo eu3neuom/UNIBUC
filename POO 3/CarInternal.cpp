@@ -1,7 +1,15 @@
 #include <bits/stdc++.h>
 #include "CarInternal.h"
 
+Car::~Car() {
+
+}
+
 Car::Car() : speed(10) {
+
+}
+
+Car::Car(int speed) : speed(speed) {
 
 }
 
