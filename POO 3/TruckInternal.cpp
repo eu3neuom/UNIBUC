@@ -13,6 +13,11 @@ Truck::Truck(int a, bool b) : speed(a), coldSupport(b) {
 
 }
 
+Truck::Truck(const Truck &other) {
+    speed = other.speed;
+    coldSupport = other.coldSupport;
+}
+
 void Truck::printVehicle(std::ostream &out, const Vehicle &veh) const {
     out << "Truck position is: " << veh.x << " " << veh.y << "\n";
     out << "Truck speed is: " << speed << "\n";

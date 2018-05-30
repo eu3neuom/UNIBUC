@@ -16,6 +16,7 @@ public:
     ~Car();
     Car();
     Car(int);
+    Car(const Car &);
 };
 
 #endif

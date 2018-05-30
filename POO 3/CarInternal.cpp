@@ -13,6 +13,10 @@ Car::Car(int speed) : speed(speed) {
 
 }
 
+Car::Car(const Car &other) {
+    speed = other.speed;
+}
+
 void Car::printVehicle(std::ostream &out, const Vehicle &veh) const {
     out << "Car position is: " << veh.x << " " << veh.y << "\n";
     out << "Car speed is: " << speed << "\n";

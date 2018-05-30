@@ -17,6 +17,7 @@ public:
     ~Truck();
     Truck();
     Truck(int , bool); 
+    Truck(const Truck &);
 };
 
 #endif

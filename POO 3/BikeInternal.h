@@ -16,6 +16,7 @@ public:
     ~Bike();
     Bike();
     Bike(int);
+    Bike(const Bike &);
 };
 
 #endif

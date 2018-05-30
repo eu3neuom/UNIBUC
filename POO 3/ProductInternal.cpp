@@ -9,6 +9,12 @@ Product::Product(int a, int b, bool c) : startTime(a), endTime(b), needColdSuppo
 
 }
 
+Product::Product(const Product &other) {
+    startTime = other.startTime;
+    endTime = other.endTime;
+    needColdSupport = other.needColdSupport;
+}
+
 std::ostream& operator << (std::ostream &out, const Product &other) {
     out << "Product time interval: [ " << other.startTime << ", " << other.endTime << " ]\n";
     out << "Product cold support: " << other.needColdSupport << "\n";

@@ -16,6 +16,7 @@ protected:
     virtual std::istream& readVehicle(std::istream&, Vehicle&) = 0;
 public:
     int x, y, maxMass, maxVolume, currentMass, currentVolume, currentTime;
+    
     Vehicle();
     Vehicle(const int &x, const int &y);
 
