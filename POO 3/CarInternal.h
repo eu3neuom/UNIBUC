@@ -17,6 +17,8 @@ public:
     Car();
     Car(int);
     Car(const Car &);
+
+    Car& operator = (const Car &);
 };
 
 #endif

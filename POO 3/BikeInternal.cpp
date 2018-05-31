@@ -52,3 +52,13 @@ void Bike::Deliver(const Product &prod) {
     this -> x = prod.eX;
     this -> y = prod.eY;
 }
+
+Bike& Bike :: operator = (const Bike &other) {
+    this -> speed = other.speed;
+    this -> x = other.x;
+    this -> y = other.y;
+    this -> maxMass = other.maxMass;
+    this -> maxVolume = other.maxVolume;
+    this -> currentTime = other.currentTime;
+    return *this;
+}

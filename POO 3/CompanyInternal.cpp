@@ -82,3 +82,12 @@ void Company::Solve() {
         }
     }
 }
+
+Company& Company::operator= (const Company &other) {
+    veh.clear(); prod.clear();
+    this -> vehNum = other.vehNum;
+    this -> prodNum = other.prodNum;
+    this -> veh = other.veh;
+    this -> prod = other.prod;
+    return *this;
+}

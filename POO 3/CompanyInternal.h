@@ -20,6 +20,8 @@ public:
 
     void addProduct(const Product &);
     void Solve();
+
+    Company& operator = (const Company &);
 };
 
 #endif

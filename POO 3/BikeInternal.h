@@ -17,6 +17,8 @@ public:
     Bike();
     Bike(int);
     Bike(const Bike &);
+
+    Bike& operator = (const Bike &);
 };
 
 #endif

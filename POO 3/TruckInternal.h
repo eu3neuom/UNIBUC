@@ -18,6 +18,8 @@ public:
     Truck();
     Truck(int , bool); 
     Truck(const Truck &);
+
+    Truck& operator = (const Truck &);
 };
 
 #endif

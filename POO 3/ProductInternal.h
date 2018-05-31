@@ -14,6 +14,8 @@ public:
 
     friend std::ostream& operator << (std::ostream &, const Product &);
     friend std::istream& operator >> (std::istream &, Product &);
+
+    Product& operator = (const Product &other);
 };
 
 #endif

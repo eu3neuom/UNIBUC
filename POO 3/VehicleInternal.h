@@ -15,7 +15,7 @@ protected:
     virtual void printVehicle(std::ostream&, const Vehicle &) const = 0;
     virtual std::istream& readVehicle(std::istream&, Vehicle&) = 0;
 public:
-    int x, y, maxMass, maxVolume, currentMass, currentVolume, currentTime;
+    int x, y, maxMass, maxVolume, currentTime;
     
     Vehicle();
     Vehicle(const int &x, const int &y);

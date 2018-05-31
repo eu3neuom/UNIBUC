@@ -1,10 +1,10 @@
 #include <bits/stdc++.h>
 #include "VehicleInternal.h"
 
-Vehicle::Vehicle() : x(0), y(0), currentMass(0), currentVolume(0) {
+Vehicle::Vehicle() : x(0), y(0) {
 }
 
-Vehicle::Vehicle(const int &x, const int &y) : x(x), y(y), currentMass(0), currentVolume(0) {
+Vehicle::Vehicle(const int &x, const int &y) : x(x), y(y) {
 }
 
 std::istream& operator >> (std::istream &in, Vehicle &veh) {

@@ -48,3 +48,14 @@ std::istream& operator >> (std::istream &in, Product &other) {
     }
     return in;
 }
+
+Product& Product::operator = (const Product &other) {
+    this -> startTime = other.startTime;
+    this -> endTime = other.endTime;
+    this -> sX = other.sX;
+    this -> sY = other.sY;
+    this -> eX = other.eX;
+    this -> eY = other.eY;
+    this -> needColdSupport = other.needColdSupport;
+    return *this;
+}

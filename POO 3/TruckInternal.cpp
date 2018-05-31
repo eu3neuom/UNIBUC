@@ -54,3 +54,14 @@ void Truck::Deliver(const Product &prod) {
     this -> x = prod.eX;
     this -> y = prod.eY;
 }
+
+Truck& Truck::operator = (const Truck &other) {
+    this -> coldSupport = other.coldSupport;
+    this -> speed = other.speed;
+    this -> x = other.x;
+    this -> y = other.y;
+    this -> maxMass = other.maxMass;
+    this -> maxVolume = other.maxVolume;
+    this -> currentTime = other.currentTime;
+    return *this;
+}
